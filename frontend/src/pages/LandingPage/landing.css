@@ -1,0 +1,123 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.home {
+    min-height: 100dvh;
+    background: linear-gradient(120deg, blue, rgb(86, 86, 232));
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: white;
+    color: blue;
+    box-shadow: 0 0 5px black;
+}
+
+.logo {
+    height: 50px;
+    width: auto;
+}
+
+.title {
+    font-size: 1.5rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .logo {
+        height: 40px;
+    }
+
+    .title {
+        font-size: 1.2rem;
+    }
+}
+
+section {
+    display: flex;
+    flex: 1;
+    color: white;
+
+    >.full-height-section {
+        display: flex;
+        flex: 1;
+        padding: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+
+        >.image-container {
+            width: fit-content;
+            display: flex;
+            justify-content: center;
+            >.responsive-image {
+                width: 100%;
+                max-width: 450px;
+                border-radius: 10px;
+            }
+        }
+
+
+        >.text-container {
+            text-align: center;
+            margin-top: 20px;
+            button {
+                outline: 2px solid white;
+                padding: 5px;
+                margin-top: 10px;
+                width: 140px;
+                border-radius: 4px;
+            }
+            button:hover {
+                background-color: aqua;
+                color: blue;
+                outline: none;
+                box-shadow: 0 0 19px aqua;
+            }
+        }
+
+        >.text-container h2 {
+            font-size: 40px;
+            font-weight: bold;
+            color: aqua;
+            text-shadow: 0 0 2px aquamarine;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .full-height-section {
+        flex-direction: row;
+        /* Side-by-side layout */
+        text-align: left;
+    }
+
+    .image-container {
+        width: 50%;
+        justify-content: flex-end;
+        padding-right: 20px;
+    }
+
+    .text-container {
+        width: 50%;
+        margin-top: 0;
+        text-align: left;
+        padding-left: 20px;
+    }
+}

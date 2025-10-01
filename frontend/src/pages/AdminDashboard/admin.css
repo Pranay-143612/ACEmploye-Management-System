@@ -1,0 +1,110 @@
+.main-cont {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-cont .header {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 50px;
+    position: relative;
+    z-index: 1000;
+}
+
+.admin-container {
+    display: flex;
+    height: calc(100dvh - 50px);
+    width: 100%;
+}
+
+/* Sidebar styles */
+.sidebar {
+    /* background-color: #7a7aeb; */
+    background-color: #fff;
+    color: blue;
+    transition: width 0.3s;
+    overflow: hidden;
+    height: calc(100vh - 50px);
+    width: fit-content;
+    z-index: 10;
+    border-right: 1px solid rgba(122, 122, 235,0.3);
+}
+
+.sidebar.open {
+    width: fit-content;
+    a {
+        display: flex;
+        gap: 10px;
+    }
+}
+
+.sidebar.closed {
+    width: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Sidebar header and links */
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+
+.toggle-btn {
+    background: none;
+    border: none;
+    color: #7a7aeb;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.sidebar-contents a {
+    display: flex;
+    align-items: center;
+    padding: 0.6rem 1rem 0.6rem 1rem;
+    color: #777;
+    text-decoration: none;
+    transition: background 0.2s;
+    margin-top: 10px;
+}
+
+.sidebar-contents a:hover {
+    background: #cbcaca ;
+    color: #000;
+    border-radius: 4px;
+    transition: 0.5s;
+}
+
+.sidebar.closed .sidebar-contents {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.sidebar.closed .sidebar-contents span {
+    display: none;
+}
+
+.admin-main {
+    flex-grow: 1;
+    padding: 0rem;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    background-color: #f6f3f3;
+    overflow-y: scroll;
+    gap: 20px;
+    >.navbar {
+        background-color: #6ff2bb;
+        padding: 12px;
+        color: #000;
+        border-radius: 4px;
+    }
+}

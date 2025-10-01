@@ -1,0 +1,90 @@
+.overview {
+    padding: 20px;
+    width: 100%;
+    max-height: fit-content;
+
+    >.over-head {
+        >h1 {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        margin-bottom: 10px;
+    }
+
+    >.cards {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 10px;
+
+        >.card1 {
+            width: 100%;
+            max-width: 350px;
+            min-width: 150px;
+            text-align: center;
+            border-radius: 20px;
+
+            >h1 {
+                background-color: orange;
+                padding: 20px;
+                color: aliceblue;
+                overflow: hidden;
+            }
+
+            >p {
+                border: 3px solid orange;
+                padding: 20px;
+            }
+        }
+    }
+
+    >.leave-updates {
+        >h1 {
+            font-weight: bold;
+            font-size: 20px;
+            margin-bottom: 10px;
+            margin-top: 20px;
+        }
+
+        >.leave-cards {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 10px;
+
+            >.stat-card {
+                background-color: #ffffff;
+                padding: 1.5rem;
+                border-radius: 10px;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                text-align: center;
+                width: 220px;
+                transition: transform 0.2s ease;
+
+                >.stat-card__title {
+                    font-size: 1rem;
+                    /* color: #555; */
+                    color: blue;
+                    margin-bottom: 0.5rem;
+                }
+
+                >.stat-card__number {
+                    font-size: 2rem;
+                    font-weight: bold;
+                    color: #222;
+                }
+
+            }
+
+            >.stat-card:hover {
+                transform: scale(1.03);
+            }
+        }
+    }
+}
